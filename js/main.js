@@ -15,6 +15,7 @@ const cell = [...document.querySelectorAll('.board > div')]; // create array wit
 
 /*----- event listeners -----*/
 // document.querySelectorAll('.board').addEventListener('click', handleClick)
+document.getElementById('board').addEventListener('mouseover', handleMouseOver)
 /*----- functions -----*/
 init();
 
@@ -23,13 +24,13 @@ init();
 function init() {
     // create a new empty array and fill sets it to 0
     board = [
-        [0, 0, 0, 0, 0, 0], // col0
+        [1, 0, 0, 0, 0, 0], // col0
         [0, 0, 0, 0, 0, 0], // col1
         [0, 0, 0, 0, 0, 0], // col2
         [0, 0, 0, 0, 0, 0], // col3
         [0, 0, 0, 0, 0, 0], // col4
         [0, 0, 0, 0, 0, 0], // col5
-        [0, 0, 0, 0, 0, 0] // col6
+        [0, 0, 0, 0, 0, -1] // col6
     ];
     // game inplay
     // gameStatus = 0;
@@ -46,12 +47,16 @@ function render() {
     board.forEach(function (columnArr, columnIdx) {
         // itterate through the inner array (row)
         columnArr.forEach(function(cell, rowIdx) {
-            const cellDiv = document.getElementsByClassName(`row-${rowIdx}-col-${columnIdx}`)
+            const cellDiv = document.getElementById(`row-${rowIdx}-col-${columnIdx}`) 
             cellDiv.style.backgroundColor = COLOR[cell];
+            cellDiv
         });
     });
 }
 
+function handleMouseOver(evt){
+const cellDiv = evt.target
+}
 
 // in response to user interaction (click)
 // we update ALL impacted state

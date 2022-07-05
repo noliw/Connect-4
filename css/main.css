@@ -6,20 +6,47 @@
     align-items: center;
   }
 
-.board{
-    height: 500px;
+
+#board{
+    height: 600px;
     width: 500px;
     border: 1px solid blue;
     background-color: blue;
     border-radius: 5%;
     display: flex;
     flex-wrap: wrap;
-    padding: 1px;
+    margin: 0;
+    
 
    
 }
+#top {
+    height: 80px;
+    width: 500px;
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ margin: 0;
+}
+ #top::after{
+    background: white;
+    border-radius: 50%;
+    border: 3px solid black;
+    content: '';
+    cursor: pointer;
+    height: 75px;
+    width: 75px;
+ }
+#top > div {
+    height: 70px;
+    width: 60px;
+    background-color: antiquewhite;
+    border-radius: 50%;
+    margin: 5px;
+}
 
-.board div {
+
+#board > div {
     height: 70px;
     width: 60px;
     background-color: antiquewhite;
