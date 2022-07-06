@@ -72,9 +72,6 @@ function handleDrop(evt) {
   render();
 }
 
-
-
-/*-- BEGIN: New Approach based upon most recent click --*/
 /**
  * It checks for a vertical win or a horizontal win.
  * @param colIdx - the column index of the last move
@@ -107,73 +104,3 @@ function checkVertWin(colIdx, rowIdx) {
   return (Math.abs(sum) === 4) ? colArr[rowIdx] : null;
 }
 
-/*-- END: New approach based upon most recent click --*/
-/**
- * We loop through the board array, and for each column array, we check if there's a winner in that
- * column
- * @returns The winner of the game.
- */
-function getWinner() {
-  let winner;
-  board.some((colArr, colIdx) => {
-    winner = checkCol(colArr, colIdx);
-    return winner;
-  });
-  return winner;
-}
-
-/**
- * If the cell is empty, break out of the some method. Otherwise, check if there's a winner in the up,
- * right, diagonal up-right, or diagonal up-left directions
- * @param colArr - the array of cells in the column
- * @param colIdx - the column index of the cell that was just clicked
- * @returns the winner of the game.
- */
-function checkCol(colArr, colIdx) {
-  let winner = 0;
-  colArr.some((cell, pos) => {
-    if (!cell) return true;  // break out of some method
-    winner =
-      ((pos <= rows - 4) && up(colArr, pos)) ||
-      ((colIdx <= cols - 4) && right(colIdx, pos)) ||
-      ((pos <= rows - 4 && colIdx <= cols - 4) && diag(colIdx, pos, 1)) ||
-      ((pos >= 3 && colIdx <= cols - 4) && diag(colIdx, pos, -1));
-    return winner;
-  });
-  return (winner === false) ? 0 : winner;
-}
-
-/**
- * If the sum of the values of the four cells in a diagonal is 4, then the value of the first cell is
- * returned. Otherwise, 0 is returned
- * @param colIdx - the column index of the first piece in the diagonal
- * @param pos - the row index of the first piece in the diagonal
- * @param vertOffset - 1 for a diagonal going down, -1 for a diagonal going up
- * @returns the value of the first element in the diagonal.
- */
-function diag(colIdx, pos, vertOffset) {
-  return (Math.abs(board[colIdx][pos] + board[colIdx + 1][pos + vertOffset] + board[colIdx + 2][pos + (vertOffset * 2)] + board[colIdx + 3][pos + (vertOffset * 3)]) === 4) ? board[colIdx][pos] : 0;
-}
-
-/**
- * If the sum of the four values in the column is 4, return the value of the first position, otherwise
- * return 0
- * @param colIdx - the column index of the first of the four numbers
- * @param pos - the row index
- * @returns the value of the first element in the array if the sum of the four elements in the array is
- * equal to 4.
- */
-function right(colIdx, pos) {
-  return (Math.abs(board[colIdx][pos] + board[colIdx + 1][pos] + board[colIdx + 2][pos] + board[colIdx + 3][pos]) === 4) ? board[colIdx][pos] : 0;
-}
-
-/**
- * If the sum of the four values in the array is 4, return the first value in the array, otherwise
- * return 0
- * @param colArr - the array of the column we're checking
- * @param pos - the position of the first element in the column
- * @returns the value of the first element in the array if the sum of the first four elements is 4.
- */
-function up(colArr, pos) {
-  return (Math.abs(colArr[pos] + colArr[pos + 1] + colArr[pos + 2] + colArr[pos + 3]) === 4) ? colArr[pos] : 0;
-}
