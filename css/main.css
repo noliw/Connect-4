@@ -100,3 +100,13 @@ background-color : #565656;
     border-radius: 50%;
     border: 0.1vmin solid grey;
   }
+
+  button{
+    height: 25vmin;
+    width: 15vmin;
+    font-size: 1vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vmin;
+  }
