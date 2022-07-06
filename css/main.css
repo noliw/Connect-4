@@ -29,7 +29,7 @@
 }
 .container {
   height : 10vh;  
-  background-color : #eee;
+  /* background-color : #eee; */
   display: flex;
   justify-content: center;
   align-items: center;
