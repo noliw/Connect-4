@@ -3,7 +3,7 @@ Connect Four is a two-player board game in which the players first choose a colo
 
 
 
-# Screenshot
+
 
 <img src="https://i.imgur.com/JqLevWQ.png">
 
@@ -25,7 +25,3 @@ Connect Four is a two-player board game in which the players first choose a colo
 
 [Click to Play Connect Four!](your deployment url here)
 
-# Next Steps
-
-- Future enhancement one...
-- Future enhancement two... 
