@@ -23,5 +23,5 @@ Connect Four is a two-player board game in which the players first choose a colo
 
 # Getting Started
 
-[Click to Play Connect Four!](your deployment url here)
+[Click to Play Connect Four!](https://noliw.github.io/Connect-4/)
 
