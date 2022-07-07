@@ -24,7 +24,6 @@ init();
 function init() {
   // create a new empty array and fill sets it to 0
   board = [
-    // [col 0, row 3]
     [0, 0, 0, 0, 0, 0], // col0
     [0, 0, 0, 0, 0, 0], // col1
     [0, 0, 0, 0, 0, 0], // col2
@@ -33,8 +32,6 @@ function init() {
     [0, 0, 0, 0, 0, 0], // col5
     [0, 0, 0, 0, 0, 0], // col6
   ];
-  // game inplay
-  // gameStatus = 0;
   // plyr 1 turn
   turn = 1;
   isGameOver = false;
@@ -89,7 +86,7 @@ function handleDrop(event) {
     // we have winning player
     isGameOver = true;
 
-    message.innerText = `Player ${winner === 1 ? "One" : "Two"} has won!`;
+    message.innerText = `Player ${winner === 1 ? "1" : "2"}  won!`;
   } else {
     // no winnder, check draw
 

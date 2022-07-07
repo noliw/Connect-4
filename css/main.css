@@ -39,7 +39,8 @@
 
 
 .animation { 
-background-color : #c4b3b3;  
+background-color : #fffb00;
+-webkit-text-stroke: 5px #ff1e00;
   font-family : "Lato", sans-serif; 
   font-size : 7vw; 
   text-transform : uppercase;
@@ -47,8 +48,6 @@ background-color : #c4b3b3;
   color : transparent; 
   background-clip : text; 
   -webkit-background-clip : text;
-  
-  
 }
 
 .animation::before { 
@@ -84,7 +83,7 @@ background-color : #c4b3b3;
     height: 3vmin;
     border-width: 6vmin;
     border-style: solid;
-    border-color: lightgray transparent transparent;
+    border-color: rgb(238, 230, 230) transparent transparent;
     transform: scale(0.7);
     margin-left: -4vmin;
     
@@ -93,7 +92,8 @@ background-color : #c4b3b3;
   #markers > div:hover {
     transform: scale(0.9);
     transition: transform 150ms ease-in;
-    border-top-color: darkgray;
+    border-top-color: rgb(3, 3, 3);
+    
   }
   
   #board {
@@ -135,18 +135,17 @@ font-size: 2vmin;
     text-transform: uppercase;
     letter-spacing: 1.3px;
     font-weight: 700;
-    color: #000000;
+    color: #cee40b;
     background: #d1be4f;
-  background: linear-gradient(90deg, rgba(217, 255, 0, 0.64) 0%, rgba(255, 77, 0, 0.64) 100%);
+  background: linear-gradient(90deg, rgb(255, 0, 0) 0%, rgba(255, 0, 0, 0.769) 100%);
     border: none;
     border-radius: 1000px;
-    box-shadow: 12px 12px 24px rgba(209, 144, 79, 0.64);
+    box-shadow: 12px 12px 24px rgba(196, 247, 11, 0.842);
     transition: all 0.3s ease-in-out 0s;
     cursor: pointer;
     outline: none;
     position: relative;
     padding: 10px;
-    /* margin-top: -30vmin; */
     }
   
   button::before {
@@ -154,8 +153,8 @@ font-size: 2vmin;
     border-radius: 1000px;
     min-width: calc(300px + 12px);
     min-height: calc(60px + 12px);
-    border: 6px solid #ff5500;
-    box-shadow: 0 0 60px rgba(255, 77, 0, 0.64);
+    border: 6px solid #f6ff00;
+    box-shadow: 0 0 60px rgb(208, 255, 0);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -165,7 +164,7 @@ font-size: 2vmin;
   }
   
   .button:hover, .button:focus {
-    color: #313133;
+    color: #e9e910;
     transform: translateY(-6px);
   }
   
@@ -203,3 +202,50 @@ font-size: 2vmin;
       opacity: 0;
     }
   }
+
+  #message{
+    animation: wiggle 4s  infinite;
+    height: 100px;
+    width: 1000px;
+      font-family: "Lato", sans-serif;
+
+      color: #fffb00;
+        -webkit-text-stroke: 5px #ff1e00;
+      font-size:6em;
+      transform-origin: 50% 5em;
+      margin-top: -1px;
+      text-align: center;
+      align-items: center;
+  }
+    @keyframes wiggle {
+  
+      0%,
+      7% {
+        transform: rotateZ(0);
+      }
+  
+      15% {
+        transform: rotateZ(-15deg);
+      }
+  
+      20% {
+        transform: rotateZ(10deg);
+      }
+  
+      25% {
+        transform: rotateZ(-10deg);
+      }
+  
+      30% {
+        transform: rotateZ(6deg);
+      }
+  
+      35% {
+        transform: rotateZ(-4deg);
+      }
+  
+      40%,
+      100% {
+        transform: rotateZ(0);
+      }
+    }
