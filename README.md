@@ -12,7 +12,7 @@ Connect Four is a two-player board game in which the players first choose a colo
 * You will take your go as player One
 * You will not be allowed to go in the slots that are not at the bottom of the grid, or do not have a taken slot under it
 * Once your go is taken and you did not win, It will be player Two's go
-* The gamer will continue until a winning combination of four is reached by player One or player Two, or until the grid is full and it's.
+* The gamer will continue until a winning combination of four is reached by player One or player Two, or until the grid is full and it's a draw.
 
 
 # Technologies Used
