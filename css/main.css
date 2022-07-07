@@ -33,7 +33,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -20vmin;
+  margin-top: -10vmin;
   
 }
 
@@ -115,10 +115,16 @@ background-color : #c4b3b3;
   .wrap {
     height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    /* align-items: center; */
+    justify-content: space-between;
+    flex-direction: row;
+    align-content: center;
+    margin-top: 100px;
   }
-  
+  #message{
+font-size: 2vmin;
+  }
+
   .button {
     height: 80px;
     width: 20px;
@@ -140,7 +146,7 @@ background-color : #c4b3b3;
     outline: none;
     position: relative;
     padding: 10px;
-    margin-top: -30vmin;
+    /* margin-top: -30vmin; */
     }
   
   button::before {
