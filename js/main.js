@@ -7,7 +7,6 @@ const COLORS = {
 
 /*----- app's state (constiables) -----*/
 let board;//0: empty slots, plyr1 or plyr2 for players
-let gameStatus; // 0: game in play, 1 or -1: winner; T for tie
 let turn; // plyr1 or plyr2
 let isGameOver;
 
