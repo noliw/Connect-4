@@ -21,6 +21,12 @@ Connect Four is a two-player board game in which the players first choose a colo
 - HTML
 - CSS
 
+# Next Steps
+
+- Add winner music
+- Add confetti when someone wins
+- Make an AI version
+
 # Getting Started
 
 [Click to Play Connect Four!](https://noliw.github.io/Connect-4/)
