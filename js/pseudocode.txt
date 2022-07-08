@@ -1,0 +1,17 @@
+1.	 Create an object constant that is storing the colors for the game. 
+2.	 Declaring the variables that will be used in the game. 
+3.	 Creating a cached array of all the marker elements. 
+4.	 Adding event listeners to the buttons.
+5.	 Initialize:
+        a.	 Create a new empty board array and fills it with zeros, 
+        b.	sets the player turn to 1, 
+        c.	game is running
+        d.	render
+6.	show the output in the browser, it helps us transfer/visualize all state to the Dom:
+        a.	For each column, for each row, set the background color of the cell to the color at the value of the cell	{red/yellow}	
+7.	For each marker element, if the corresponding column is empty, make the marker visible, hide it otherwise.
+8.	update all impacted state if the game is running:
+        a.	 update the board if above conditions are met
+        b.	 check for a winner, and if there is no winner, we check for a draw:
+                i.	Check for a winner horizontally, vertically or diagonally(right/left)
+9.	reset the game by initializing the board to its original state and clearing the message

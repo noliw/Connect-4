@@ -1,4 +1,5 @@
 /*----- constants -----*/
+
 const COLORS = {
   0: "white",
   1: "red",
@@ -6,21 +7,26 @@ const COLORS = {
 };
 
 /*----- app's state (constiables) -----*/
+
 let board; //0: empty slots, plyr1 or plyr2 for players
 let turn; // plyr1 or plyr2
 let isGameOver;
 
 /*----- cached element references -----*/
+
 const markerEls = [...document.querySelectorAll("#markers > div")]; //creates an array and spreads it out;
 
 /*----- event listeners -----*/
-// document.querySelectorAll('.board').addEventListener('click', handleClick)
+
 document.getElementById("markers").addEventListener("click", handleDrop);
 document.getElementById("playAgain").addEventListener("click", playAgain);
 const message = document.getElementById("message");
 /*----- functions -----*/
 init();
 
+/**
+
+ */
 function init() {
   // create a new empty array and fill sets it to 0
   board = [
@@ -32,12 +38,14 @@ function init() {
     [0, 0, 0, 0, 0, 0], // col5
     [0, 0, 0, 0, 0, 0], // col6
   ];
-  // plyr 1 turn
   turn = 1;
   isGameOver = false;
   render();
 }
 
+/**
+ * 
+ */
 function playAgain() {
   init();
   message.innerText = "";
@@ -47,6 +55,7 @@ function playAgain() {
 // its job is to transfer/visualize all state to the Dom
 let cols = board.length,
   rows = board[0].length;
+
 function render() {
   // itterate through the outter array (columns)
   board.forEach(function (colArr, colIdx) {
