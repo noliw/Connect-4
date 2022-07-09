@@ -29,11 +29,10 @@
 }
 .container {
   height : 10min;  
-  /* background-color : #eee; */
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -10vmin;
+  /* margin-top: -6vmin; */
   
 }
 
@@ -72,9 +71,9 @@ background-color : #fffb00;
 
   #markers {
     display: grid;
-    grid-template-columns: repeat(7, 4vmin);
-    gap: 5vmin;
-    margin: 3vmin;
+    grid-template-columns: repeat(7, 5vmin);
+    gap: 5.5vmin;
+    
     margin-top: -5vmin;
     
   }
@@ -85,7 +84,7 @@ background-color : #fffb00;
     border-style: solid;
     border-color: rgb(238, 230, 230) transparent transparent;
     transform: scale(0.7);
-    margin-left: -4vmin;
+    margin-left: -3.5vmin;
     
   }
   
@@ -100,8 +99,8 @@ background-color : #fffb00;
     display: grid;
     grid-template-columns: repeat(7, 4vmin);
     grid-template-rows: repeat(6, 4vmin);
-    gap: 5vmin;
-    margin-top: -3vmin;
+    gap: 6.5vmin;
+    
   }
   
   #board > div {
